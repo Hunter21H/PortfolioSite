@@ -1,0 +1,213 @@
+
+@font-face {
+  font-family: "antipasto";
+  src: url(AntipastoPro-Medium_trial.ttf);
+}
+
+
+@keyframes rotate {
+  from{rotate: 0deg;}
+  to {rotate: 360deg;}
+}
+
+@keyframes fade {
+    from{opacity: 0%;}
+    to{opacity: 100%;}  
+}
+
+
+div{font-family: "antipasto"; color:aliceblue}
+
+button{
+  border: none; background: none; padding: 0;
+}
+
+.blank{
+  width: 0px;
+  height: 0px;
+}
+
+
+.hexagon {
+    height: 80px; /* adjust to control the size  */
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+    background: #777eac;
+    border: none;
+    
+    position: absolute; 
+    z-index: 1; 
+    animation: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite;
+   
+  }
+
+
+.bar{
+  width: 40px;
+  height: 20px;
+  background: #02091c;
+  
+
+  margin-left: auto; 
+  margin-right: auto; 
+ 
+  left: 26px; 
+  top: 30px;
+
+  animation: none;
+
+}
+
+.arrow{
+width: 0;
+height: 0;
+border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #02091c;
+
+  margin-left: auto; 
+  margin-right: auto; 
+  justify-content: center;
+  
+  top: 20px;
+  left: 17px;
+
+}
+
+
+.Boxcontainer{
+  
+  display:flex;
+  
+  margin: 10px;
+  gap: 10px;
+  
+  justify-content: center;
+
+
+  animation: fade;
+  animation-duration: 5s;
+  
+}
+
+
+.box{
+  
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  width: calc(150*2px);
+  height: calc(60*2px);
+
+  
+
+  position: relative;
+  
+ 
+  top: 200px;
+  
+  background: #777eac;
+
+  border-radius: calc(7%);
+
+  text-align: center;
+
+  font-size: xx-large;
+
+}
+
+.textContainer{
+  
+  color: white;
+  border: solid #b4b5dc;
+  width: 800px;
+  margin: auto;
+
+
+  text-align: center;
+
+  margin-top: 1000px; 
+
+  font-size: x-large;
+
+  border-radius: 10px;
+
+}
+
+.scrollBar::-webkit-scrollbar{
+  display: none;
+}
+
+.projectContainer{
+  
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  
+
+  width: 1300px;
+  height: 700px;
+
+  border: white solid;
+
+  margin: auto;
+  margin-top: 400px;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+}
+  
+
+
+
+.projectBox{
+
+  width: 500px;
+  height: 600px;
+
+  margin: 10px;
+  margin-top: 4%;
+
+  border: #777eac solid;  
+
+  flex-shrink: 0;
+
+  text-align: center;
+  
+  position: relative;
+
+  border-radius: 10px;
+
+  color: white;
+
+  + child{
+    background-color: aliceblue;
+  }  
+
+}
+
+.imgContainer{
+  width: 100px;
+  height: 100px;
+
+  margin-top: 10px;
+  display: flex;
+
+  margin-left: 40%;
+  margin-top: 10%;
+
+}
+
+.generalContainer{
+  display: flex;
+  align-items: center;
+}
